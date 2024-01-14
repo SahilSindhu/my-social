@@ -6,6 +6,7 @@ export class UsersController {
     getUsers(){
         return ['sahil']
     }
+    
     @Get('byType')
     getUsersByType(@Query('type') type:string){
         return {type}

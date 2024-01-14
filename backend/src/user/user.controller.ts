@@ -7,6 +7,7 @@ export class UserController {
     getUser(@Param('id') id:string){
         return {id}
     }
+    
     @Post()
     createUser(@Body() createUserDto: CreateUserDto){
         return { name: createUserDto.name}
