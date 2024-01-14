@@ -6,7 +6,12 @@ export class UserService {
 
 
     getUser(id=''){
-        return this.users.find(user => user?.id === id);
+        const user = this.users.find(user => user?.id === id);
+        if(!user){
+            throw new Error;
+        }else{
+            return user;
+        }
     }
 
     createUser(user){
